@@ -7,7 +7,10 @@ authors = [
     { name = "queraltbenito7", email = "94627489+queraltbenito7@users.noreply.github.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+]
 
 [project.scripts]
 garmin-health-hub = "garmin_health_hub:main"
