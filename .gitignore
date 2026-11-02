@@ -1,0 +1,15 @@
+# Entorno y cachés de Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Secretos
+.env
+
+# Datos personales
+data/
+
+# macOS
+.DS_Store
