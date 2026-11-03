@@ -14,3 +14,10 @@ def save_raw(data: list, dataset: str, start: date, end: date) -> Path:
     path = folder / f"{start}_{end}.json"
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
     return path
+
+def load_raw(dataset: str) -> list:
+    """Lee todos los JSON de data/raw/<dataset>/ y junta sus registros en una lista."""
+    records = []
+    for path in sorted((RAW_DIR / dataset).glob("*.json")):
+        records.extend(json.loads(path.read_text()))
+    return records
