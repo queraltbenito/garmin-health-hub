@@ -1,7 +1,7 @@
 [project]
 name = "garmin-health-hub"
 version = "0.1.0"
-description = "Add your description here"
+description = "Dashboard personal de salud con datos de la Garmin Personal API"
 readme = "README.md"
 authors = [
     { name = "queraltbenito7", email = "94627489+queraltbenito7@users.noreply.github.com" }
@@ -12,9 +12,9 @@ dependencies = [
     "requests>=2.34.2",
 ]
 
-[project.scripts]
-garmin-health-hub = "garmin_health_hub:main"
-
 [build-system]
 requires = ["uv_build>=0.13.6,<0.14.0"]
 build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "garmin_hub"
